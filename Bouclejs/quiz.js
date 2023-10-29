@@ -63,8 +63,8 @@ const shuffle = require('shuffle-array');
             console.log("incorrect");
         }
     }
-    console.log(' tu as un score de : ' + score + "/" + questions.length);
+    console.log(` tu as un score de : ${score}/${questions.length}`);
 
-  
+
 
 })()
