@@ -1,17 +1,22 @@
-const{input}= require('@inquirer/prompts');
 
-(async function(){
+const { input } = require('@inquirer/prompts');
 
-    const n = await input({message : "Saisissez un nombre? "});
-    let somme = 0;
-    for(let i = 0; i<=n; i++){
-        console.log(i);
-        console.log(`Nombre : ${i} ${(i%2 == 1 ? "est impair" : "")}`);
-        if(i%2 == 1) {
-            somme+=i;
+
+(async function () {
+    let nb = NaN;
+    
+    while(isNaN(nb)){
+        const response = await input({ message: 'Saisissez un nombre ?' });
+        nb = parseInt(response, 10)
+    }
+
+    let total = 0
+    for(let i=1; i<=nb;i++){
+        if(i % 2 == 1) {
+            total += i
         }
     }
-    console.log(`\nLa somme total des nombres impair jusqu'a ${n} vaut ${somme}`);
 
-    
+    console.log('total', total)
+
 })()

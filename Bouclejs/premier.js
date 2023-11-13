@@ -1,25 +1,24 @@
-const {input} = require('@inquirer/prompts');
-const chalk = require('chalk');
+const { input } = require('@inquirer/prompts');
 
-(async function(){
 
-    const n = await input({message : ' Saisissez un nombre?'});
-    let premier
-    let diviseurs = []
-    // Verification
-
-  for (let i = 1; i <= n; i++) {
-    if (n % i == 0) {
-      diviseurs.push(i)
+(async function () {
+    let nb = NaN;
+    
+    while(isNaN(nb)){
+        const response = await input({ message: 'Saisissez un nombre ?' });
+        nb = parseInt(response, 10)
     }
-  }
-  if (diviseurs.length == 2) {
-    premier = true
-  }
-  else {
-    premier = false
-  }
-   // Resultat
 
-   console.log(premier ? chalk.green(`${n} est un nombre premier`) : chalk.red(`${n} n'est pas un nombre premier`));
+    for(let i=1; i<=nb;i++) {
+        let total = 0
+        for(let e=1; e<=i;e++){
+            if(i % e === 0) {
+                total++
+            }
+        }
+        if(total === 2){
+            console.log(`nombre premier ${i}`)
+        }
+    }
+
 })()
