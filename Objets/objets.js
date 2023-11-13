@@ -19,10 +19,10 @@ console.log(user)*/
 
 
 const user = [
-    {firstname :'Fils', lastname :"Deputs"},
-    {firstname :'Grosse', lastname :"schnek"},
-    {firstname :'Tete', lastname :"Debite"},
-    {firstname :'Co', lastname :"Nard"},
+    {firstname :'Robert', lastname :"Duclos"},
+    {firstname :'Charles', lastname :"Richilieu"},
+    {firstname :'Tete', lastname :"Aclaque"},
+    {firstname :'Alain', lastname :"Nardon"},
 ]
 
 /*for(let i = 0 ; i<user.length; i++){
