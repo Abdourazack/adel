@@ -11,10 +11,8 @@ for (i=0;i<tableau.length;i++){
     if(tableau[i]>max){
         max=tableau[i];
         console.log(tableau[i])
-    }
-   
+    } 
 }
-
 return max;
 }
 max=valeur_max(tableau);
